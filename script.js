@@ -14,24 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 點擊上傳
 
-
-  
-
-    qualitySlider.addEventListener('input', (e) => {
-        qualityValue.textContent = `${e.target.value}%`;
-        if (currentFile) compressImage(currentFile);
-    });
-
-    // 處理上傳的文件
-    function handleFile(file) {
-        if (!file.type.startsWith('image/')) {
-            alert('請上傳圖片文件！');
-            return;
-        }
-
-        currentFile = file;
-        const reader = new FileReader();
-        reader.onload = (e) => {
             originalImage.src = e.target.result;
             originalSize.textContent = `原始大小: ${(file.size / 1024).toFixed(2)} KB`;
             compressImage(file);
