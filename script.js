@@ -13,12 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentFile = null;
 
     // 點擊上傳
-    dropZone.addEventListener('click', () => fileInput.click());
 
-    // 拖放上傳
-    dropZone.addEventListener('dragover', (e) => {
-        e.preventDefault();
-        dropZone.style.borderColor = '#0071e3';
+
+  
     });
 
     dropZone.addEventListener('dragleave', (e) => {
