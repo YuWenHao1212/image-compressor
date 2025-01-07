@@ -16,15 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   
-    });
 
-    dropZone.addEventListener('dragleave', (e) => {
-        e.preventDefault();
-        dropZone.style.borderColor = '#d2d2d7';
-
-    });
-
-    // 質量滑塊變化處理
     qualitySlider.addEventListener('input', (e) => {
         qualityValue.textContent = `${e.target.value}%`;
         if (currentFile) compressImage(currentFile);
