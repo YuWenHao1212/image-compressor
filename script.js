@@ -21,18 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     dropZone.addEventListener('dragleave', (e) => {
         e.preventDefault();
         dropZone.style.borderColor = '#d2d2d7';
-    });
 
-    dropZone.addEventListener('drop', (e) => {
-        e.preventDefault();
-        dropZone.style.borderColor = '#d2d2d7';
-        const files = e.dataTransfer.files;
-        if (files.length) handleFile(files[0]);
-    });
-
-    // 文件選擇處理
-    fileInput.addEventListener('change', (e) => {
-        if (e.target.files.length) handleFile(e.target.files[0]);
     });
 
     // 質量滑塊變化處理
