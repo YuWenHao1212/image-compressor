@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖像壓縮工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <svg class="logo" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M17 8l-5-5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 3v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            圖像壓縮工具
+        </h1>
+        
+        <div class="upload-container" id="dropZone">
+            <input type="file" id="fileInput" accept="image/*" hidden>
+            <div class="upload-content">
+                <svg viewBox="0 0 24 24" width="48" height="48">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M17 8l-5-5-5 5" fill="none" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 3v12" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                <p>點擊或拖放圖片至此處</p>
+            </div>
+        </div>
+
+        <div class="preview-container" id="previewContainer" style="display: none;">
+            <div class="image-preview">
+                <div class="original">
+                    <h3>原始圖片</h3>
+                    <img id="originalImage">
+                    <p id="originalSize"></p>
+                </div>
+                <div class="compressed">
+                    <h3>壓縮後</h3>
+                    <img id="compressedImage">
+                    <p id="compressedSize"></p>
+                </div>
+            </div>
+            <div class="controls">
+                <label>
+                    壓縮質量：
+                    <input type="range" id="qualitySlider" min="0" max="100" value="75">
+                    <span id="qualityValue">75%</span>
+                </label>
+                <button id="downloadBtn" class="download-btn">下載壓縮圖片</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
